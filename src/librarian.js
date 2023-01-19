@@ -29,17 +29,11 @@ class Librarian {
 
     return returnStatment;
   };
+
   calculateLateFee = (days) => {
-    // might want to refactor this it make it more dynamic
-    // for every 3 days add 1 or something
-    // not sure if that would work but it might be worth looking into
-    let fee = 0;
+    const fee = days * 0.25;
 
-    if (days === 3 && days <= 6) {
-      return fee + 1;
-    }
-
-    return fee + 3;
+    return Math.ceil(fee);
   };
 
 }
